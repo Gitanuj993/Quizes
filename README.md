@@ -14,3 +14,12 @@ User Choose the Answer From the Options
 |
 User 's Score Displayed At the End of the program 
 ```
+# Get Started 
+Clone the project and play Quize, modify Quize on your machine!
+
+## Clone Repository 
+```txt
+git clone https://github.com/Gitanuj993/Quizes
+cd Quizes
+```
+
