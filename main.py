@@ -1,34 +1,47 @@
-"""
-Welcome Explorers 
-aim : To create a quize plateform and play some quizes
-dependency : NIL
-theory : list , dict
+from questions import questions
 
-"""
-questions= [
-    {
-    "question" : " Which one of programming language use interpreter ?",
-    "options" : [" A. python " , " B. C lang" , " C++ lang" , " java " ],
-    "ans" : "A"
-    }, #1st
-    {
-        "question" : "Which language is used for data analysis ?",
-        "options" : [" A. python " , " B. C lang" , " C++ lang" , " java " ],
-        "ans" : "A"
-    }
-        ]
-score = 0
-negative = 0
+# number of questions
 
-for q in questions :
-    print(f"\n {q["question"]}")
-    for option in q["options"] :
-        print(f"{option}")
-    user_input = str(input("Enter your answer : ")).upper()
-    if ( user_input == q["ans"]) :
-        score+= 1
-    else:
-        negative+= 1
+def percentage(score,total) :
+ 	per = ( score / total ) *100
+ 	return per
 
-print(f" Final result is  {score} \n you gave {score} right answers and {negative}  wrong answered" )
+if __name__ == "__main__" :
+	print("Welcome AT")
+	score = 0 
+	neg = 0 
+	no_questions = int(input(" Enter no of questions : "))
+	total_q = no_questions
+	
+	for q in questions :
+		no_questions-=1
+		if (no_questions == -1) :
+			break
+		print(q["question"])
+		for option in q["options"] :
+			print(option)
+		user_choice = input("Enter your choice : ").upper()
+		if ( user_choice == q["ans"]) :
+			score+=1
+		else :
+			neg+=1
+	
+	print(f"You answered {score} correct and {neg} wrong answers out of {total_q} questions ")
+	
+	# pass and failed test cases 
+	
+	perc = percentage(score,total_q)
+	if ( perc < 27 ) :
+		print(" Score is too low !")
+	elif ( perc >80 ) :
+		print( " Excelent !")
+		
+	else :
+		print(" Good Score ")
 
+
+
+
+
+
+	
