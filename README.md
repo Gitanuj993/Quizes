@@ -19,7 +19,7 @@ Clone the project and play Quize, modify Quize on your machine!
 
 ## Clone Repository 
 ```txt
-git clone https://github.com/Gitanuj993/Quizes
+git clone https://github.com/Gitanuj993/ask-me-quizes
 cd Quizes
 ```
 
